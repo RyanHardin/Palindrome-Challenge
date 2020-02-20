@@ -2,21 +2,19 @@ package com.example.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.UUID;
-
 public class Person {
-    private final UUID id;
+    private final int count;
     private final String name;
 
 
-    public Person(@JsonProperty("id") UUID id,
+    public Person(@JsonProperty("count") int count,
                   @JsonProperty("name") String name) {
-        this.id = id;
+        this.count = count;
         this.name = name;
     }
 
-    public UUID getId() {
-        return id;
+    public int getCount() {
+        return count;
     }
 
     public String getName() {
